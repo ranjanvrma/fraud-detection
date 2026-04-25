@@ -1,6 +1,6 @@
 # 💳 Fraud Detection Using Machine Learning
 
-A supervised machine learning project to detect fraudulent online payment transactions using the **PaySim dataset**.
+End-to-end machine learning project to detect fraudulent online payment transactions using the **PaySim dataset**.
 
 ## 📌 Objective
 
@@ -8,6 +8,8 @@ Build a classification model that predicts whether a transaction is:
 
 * ✅ Genuine
 * 🚨 Fraudulent
+
+Main focus: maximize **Recall** to reduce missed fraud cases.
 
 ## 📂 Dataset
 
@@ -35,9 +37,10 @@ Data Loading
 → EDA
 → Encoding
 → Train-Test Split
-→ SMOTE
 → Model Training
 → Evaluation
+→ Final Model Selection
+→ Model Serialization (.pkl)
 ```
 
 ## 🛠 Tech Stack
@@ -48,15 +51,14 @@ Data Loading
 * Matplotlib
 * Seaborn
 * Scikit-learn
-* XGBoost
 * Jupyter / Google Colab
 
 ## 🤖 Models Used
 
 * Logistic Regression
 * Decision Tree
-* Random Forest
-* XGBoost
+* Random Forest (Final Selected Model)
+* Naive Bayes
 
 ## 📈 Evaluation Metrics
 
@@ -65,14 +67,16 @@ Data Loading
 * Recall
 * F1 Score
 * Confusion Matrix
+* ROC-AUC
 
-> Recall is especially important in fraud detection.
+> Recall is prioritized in fraud detection because missing fraudulent transactions can cause financial loss.
 
 ## 🚀 Future Scope
 
-* Real-time fraud detection
-* Streamlit deployment
+* Streamlit Web App Deployment
+* Hyperparameter Tuning
 * Explainable AI
+* Real-time Fraud Detection API
 * Banking integration
 
 ## 👨‍💻 Author
