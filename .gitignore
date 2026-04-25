@@ -16,6 +16,7 @@ env/
 
 # Model files
 *.pkl
+!models/fraud_model.pkl
 *.joblib
 *.h5
 *.onnx
