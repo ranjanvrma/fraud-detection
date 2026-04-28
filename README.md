@@ -1,22 +1,34 @@
-# 💳 Fraud Detection Using Machine Learning
+# 🛡️ Fraud Detection Using Machine Learning
 
-End-to-end machine learning project to detect fraudulent online payment transactions using the **PaySim dataset**.
+Machine Learning project to detect fraudulent online payment transactions using the **PaySim dataset**. Built with feature engineering, Random Forest, and Streamlit deployment.
+
+---
 
 ## 📌 Objective
 
-Build a classification model that predicts whether a transaction is:
+Classify transactions as:
 
-* ✅ Genuine
-* 🚨 Fraudulent
+- ✅ Genuine  
+- 🚨 Fraudulent  
 
-Main focus: maximize **Recall** to reduce missed fraud cases.
+Focus: maximize **Recall** to reduce missed fraud cases.
+
+---
 
 ## 📂 Dataset
 
 **PaySim Fraud Detection Dataset**
 
+> Dataset not included due to file size. Place inside:
+
+```
+/data/paysim.csv
+```
+**PaySim Fraud Detection Dataset**
+
 Features used:
 
+Raw:
 * `step`
 * `type`
 * `amount`
@@ -25,23 +37,14 @@ Features used:
 * `oldbalanceDest`
 * `newbalanceDest`
 
-Target:
-
-* `isFraud`
-
-## ⚙️ Workflow
-
-```text
-Data Loading
-→ Data Cleaning
-→ EDA
-→ Encoding
-→ Train-Test Split
-→ Model Training
-→ Evaluation
-→ Final Model Selection
-→ Model Serialization (.pkl)
-```
+Engineered:
+* `amount_to_balance_ratio`
+* `sender_drained`
+* `dest_was_zero`
+* `balance_error_orig`
+* `balance_error_dest`
+  
+Target: `isFraud`
 
 ## 🛠 Tech Stack
 
@@ -49,35 +52,36 @@ Data Loading
 * Pandas
 * NumPy
 * Matplotlib
-* Seaborn
 * Scikit-learn
 * Jupyter / Google Colab
 
-## 🤖 Models Used
+## 🤖 Model
 
-* Logistic Regression
-* Decision Tree
-* Random Forest (Final Selected Model)
-* Naive Bayes
+### Random Forest
 
 ## 📈 Evaluation Metrics
 
-* Accuracy
-* Precision
-* Recall
-* F1 Score
-* Confusion Matrix
-* ROC-AUC
+* TN = 1,270,719
+* FP = 58
+* FN = 4
+* TP = 1,635
+* Precision: 96.57%
+* Recall: 99.76%
+* Accuracy: 99.99%
 
 > Recall is prioritized in fraud detection because missing fraudulent transactions can cause financial loss.
 
-## 🚀 Future Scope
+## 🖥️ App Features
+* Real-time fraud prediction
+* Fraud Risk Score
+* Low / Medium / High alerts
+* Explanation-based insights
 
-* Streamlit Web App Deployment
-* Hyperparameter Tuning
-* Explainable AI
-* Real-time Fraud Detection API
-* Banking integration
+Run locally:
+```
+pip install -r requirements.txt
+streamlit run app.py
+```
 
 ## 👨‍💻 Author
 
