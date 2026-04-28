@@ -1,41 +1,56 @@
-# Python cache
+# ===============================
+# Python
+# ===============================
 __pycache__/
 *.py[cod]
-*$py.class
+*.pyo
+*.pyd
+*.so
+*.egg-info/
 
-# Jupyter Notebook checkpoints
+# ===============================
+# Virtual Environments
+# ===============================
+venv/
+.venv/
+env/
+
+# ===============================
+# Jupyter
+# ===============================
 .ipynb_checkpoints/
 
-# Virtual environments
-venv/
-env/
-.venv/
-
-# Environment variables
-.env
-
-# Model files
-*.pkl
-!models/fraud_model.pkl
-*.joblib
-*.h5
-*.onnx
-
-# Dataset files (optional if large/private)
-data/
-*.csv
-
-# Logs
-*.log
-
-# IDE files
+# ===============================
+# IDE
+# ===============================
 .vscode/
 .idea/
 
-# OS files
+# ===============================
+# OS Files
+# ===============================
 .DS_Store
 Thumbs.db
 
-# Temporary files
+# ===============================
+# Logs / Temp
+# ===============================
+*.log
 *.tmp
-*.swp
+
+# ===============================
+# Environment Files
+# ===============================
+.env
+
+# ===============================
+# Dataset Files
+# ===============================
+data/
+*.csv
+
+# ===============================
+# Build Files
+# ===============================
+build/
+dist/
