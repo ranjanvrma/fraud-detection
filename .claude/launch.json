@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "streamlit-app",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "streamlit", "run", "app.py", "--server.headless=true"],
+      "port": 8501
+    },
+    {
+      "name": "fraud-api",
+      "runtimeExecutable": "uvicorn",
+      "runtimeArgs": ["api.main:app", "--host", "0.0.0.0", "--port", "8000"],
+      "port": 8000
+    }
+  ]
+}
