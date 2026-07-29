@@ -22,7 +22,7 @@ Classify a transaction as genuine or fraudulent, prioritizing **recall** — in 
                            │ loads
         ┌──────────────────┴────────────────────┐
         │                                       │
-┌───────▼────────┐                    ┌─────────▼──────────┐
+┌───────▼─────────┐                   ┌─────────▼──────────┐
 │  FastAPI (api/) │  /predict /health │  Streamlit (app.py)│
 │  REST service   │                   │  Interactive UI    │
 └───────┬─────────┘                   └─────────┬──────────┘
