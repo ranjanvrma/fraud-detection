@@ -1,5 +1,9 @@
 # 💳 Fraud Detection — ML Model + API + Web App
 
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-Live%20Demo-ff4b4b)
+
 End-to-end machine learning project that detects fraudulent online payment transactions using the **PaySim dataset**, served through a **FastAPI backend** and an interactive **Streamlit UI**, fully containerized with Docker.
 
 **🔗 Live Demo:** [fraud-risk-simulator.streamlit.app](https://fraud-risk-simulator.streamlit.app/)
@@ -57,9 +61,14 @@ api/                 FastAPI service (main.py, Dockerfile)
 app.py               Streamlit UI (single-transaction + batch CSV scoring)
 tests/               pytest unit + API tests
 reports/             metrics.json, model_comparison.md, confusion matrix, ROC curve
+samples/             sample CSV for testing the batch-upload feature
 notebook/            original EDA + model exploration notebook
 models/              serialized model + column order
 ```
+
+## Sample Test Data
+
+[`samples/test_transactions.csv`](samples/test_transactions.csv) contains 55 example transactions — a mix of low-risk (everyday payments/deposits) and high-risk (near-full-balance transfers/cash-outs to empty accounts) rows. Upload it in the **Batch Upload** tab of the app to see the model score a realistic spread of LOW/MEDIUM/HIGH risk transactions.
 
 ## Running Locally
 
@@ -128,6 +137,10 @@ The Streamlit app is deployed on [Streamlit Community Cloud](https://streamlit.i
 * Authentication + rate limiting on the API
 * Real-time streaming inference
 * CI pipeline running `pytest` on every push
+
+## License
+
+[MIT](LICENSE)
 
 ## Author
 

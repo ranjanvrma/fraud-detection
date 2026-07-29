@@ -47,7 +47,6 @@ Thumbs.db
 # Dataset Files
 # ===============================
 data/
-*.csv
 
 # ===============================
 # Build Files
