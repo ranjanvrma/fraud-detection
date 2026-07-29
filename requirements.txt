@@ -5,3 +5,9 @@ scikit-learn
 joblib
 matplotlib
 seaborn
+xgboost
+fastapi
+uvicorn[standard]
+plotly
+pytest
+httpx
