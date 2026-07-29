@@ -2,6 +2,8 @@
 
 End-to-end machine learning project that detects fraudulent online payment transactions using the **PaySim dataset**, served through a **FastAPI backend** and an interactive **Streamlit UI**, fully containerized with Docker.
 
+**🔗 Live Demo:** [fraud-risk-simulator.streamlit.app](https://fraud-risk-simulator.streamlit.app/)
+
 ## Objective
 
 Classify a transaction as genuine or fraudulent, prioritizing **recall** — in fraud detection, a missed fraud case is far more costly than a false alarm.
@@ -116,12 +118,9 @@ curl -X POST http://localhost:8000/predict \
 
 Python · Pandas · scikit-learn · XGBoost · FastAPI · Streamlit · Plotly · Docker · pytest
 
-## Deploying the Streamlit App Publicly
+## Deployment
 
-This repo is ready to deploy as-is on [Streamlit Community Cloud](https://streamlit.io/cloud):
-1. Push this repo to GitHub.
-2. Connect the repo on Streamlit Community Cloud, pointing to `app.py`.
-3. Set the Python version and it will install from `requirements.txt` automatically.
+The Streamlit app is deployed on [Streamlit Community Cloud](https://streamlit.io/cloud) at **[fraud-risk-simulator.streamlit.app](https://fraud-risk-simulator.streamlit.app/)**, built directly from this repo's `main` branch (`app.py`, installing from `requirements.txt`).
 
 ## Future Scope
 
