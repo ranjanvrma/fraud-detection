@@ -27,6 +27,14 @@ Classify a transaction as genuine or fraudulent, prioritizing **recall** — in 
 
 Both services run in Docker via `docker-compose.yml`.
 
+## Dataset
+
+**PaySim Fraud Detection Dataset** — not included in this repo due to file size (`data/` is gitignored). Download it and place it at:
+
+```
+data/paysim.csv
+```
+
 ## Model
 
 | Model | Precision | Recall | F1 | ROC-AUC |
